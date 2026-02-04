@@ -89,7 +89,7 @@ function ProjectDetail({ theme, toggleTheme }) {
         </div>
 
         <div className="detail-section">
-          <h2>Key Features</h2>
+          <h2>Technical Contributions</h2>
           <ul className="features-list">
             {project.features.map((feature, index) => (
               <li key={index}>{feature}</li>
@@ -101,9 +101,7 @@ function ProjectDetail({ theme, toggleTheme }) {
           <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-btn github-btn">
             <span>💻</span> View on GitHub
           </a>
-          <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="project-btn live-btn">
-            <span>🚀</span> Live Demo
-          </a>
+          
         </div>
       </div>
 
