@@ -7,27 +7,51 @@ function HomePage() {
   return (
     <>
       {/* Navigation */}
-      <nav className="navbar">
-        <div className="logo">SJ.</div>
-        <ul className="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+     <nav className="navbar">
+  <div className="logo">SJ.</div>
+  <ul className="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+      <a href="/assets/Sachin Jayasinghe-Resume.pdf" download className="cv-download">
+        Download CV
+      </a>
+    </li>
+  </ul>
+</nav>
+
+      {/* New Hero Section with Photo */}
+<section className="hero-animated">
+  <div className="animated-background">
+    <span className="name-left">Sachin</span>
+    <span className="name-right">Jayasinghe</span>
+  </div>
+  <div className="hero-photo-container">
+    <img src="/assets/sachin-photo.png" alt="Sachin Jayasinghe" className="hero-photo" />
+  </div>
+  
+</section>
+
+
 
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Hi, I'm <span className="highlight">Your Name</span>
+            Hi, I'm <span className="highlight">Sachin</span>
           </h1>
           <p className="hero-subtitle">MERN Stack Developer</p>
           <p className="hero-description">
             Building creative web experiences with MongoDB, Express, React & Node.js
           </p>
-          <a href="#contact" className="cta-button">Get in Touch</a>
+          <div className="hero-buttons">
+  <a href="#contact" className="cta-button">Get in Touch</a>
+  <a href="/assets/Sachin Jayasinghe-Resume.pdf" download className="cta-button secondary">
+    Download CV
+  </a>
+</div>
         </div>
       </section>
 
