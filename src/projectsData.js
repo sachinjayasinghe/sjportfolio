@@ -8,11 +8,11 @@ const projectsData = [
     githubLink: "https://github.com/yourusername/ecommerce-project",
     
     images: [
-      "https://via.placeholder.com/800x500/00ff88/ffffff?text=E-Commerce+Home",
-      "https://via.placeholder.com/800x500/ff0080/ffffff?text=Product+Page",
-      "https://via.placeholder.com/800x500/00ff88/ffffff?text=Shopping+Cart",
-      "https://via.placeholder.com/800x500/ff0080/ffffff?text=Checkout",
-      "https://via.placeholder.com/800x500/00ff88/ffffff?text=Admin+Dashboard"
+      "/assets/projects/hms1.png",
+      "/assets/projects/hms2.png",
+      "/assets/projects/hms3.png",
+      "/assets/projects/hms4.png",
+      "/assets/projects/hms5.png"
     ],
     features: [
       "POS interface to manage dine-in and takeaway orders with payment options (cash, card, or guest billing).",
@@ -33,11 +33,10 @@ const projectsData = [
     githubLink: "https://github.com/yourusername/task-manager",
     
     images: [
-      "https://via.placeholder.com/800x500/00ff88/ffffff?text=Dashboard",
-      "https://via.placeholder.com/800x500/ff0080/ffffff?text=Task+Board",
-      "https://via.placeholder.com/800x500/00ff88/ffffff?text=Drag+and+Drop",
-      "https://via.placeholder.com/800x500/ff0080/ffffff?text=Team+View",
-      "https://via.placeholder.com/800x500/00ff88/ffffff?text=Notifications"
+      "/assets/projects/bee4.png",
+      "/assets/projects/bee5.png",
+      "/assets/projects/bee6.png",
+     
     ],
     features: [
       "Designed the complete hardware circuit using EasyEDA for sensor integration and system reliability",
@@ -55,11 +54,11 @@ const projectsData = [
     githubLink: "https://github.com/yourusername/social-dashboard",
     liveLink: "https://your-social-dashboard-demo.com",
     images: [
-      "https://via.placeholder.com/800x500/00ff88/ffffff?text=Dashboard+Overview",
-      "https://via.placeholder.com/800x500/ff0080/ffffff?text=Analytics+Charts",
-      "https://via.placeholder.com/800x500/00ff88/ffffff?text=Engagement+Metrics",
-      "https://via.placeholder.com/800x500/ff0080/ffffff?text=Growth+Trends",
-      "https://via.placeholder.com/800x500/00ff88/ffffff?text=Export+Reports"
+      "/assets/projects/rbtm1.png",
+      "/assets/projects/rbtm2.png",
+      "/assets/projects/rbtm3.png",
+      "/assets/projects/rbtm4.png",
+      "/assets/projects/rbtm5.png"
     ],
     features: [
       "JWT-based authentication with role-based access control (Admin/User).",

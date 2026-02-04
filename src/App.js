@@ -141,7 +141,11 @@ function HomePage({ theme, toggleTheme }) {  // Add props here
             
             {projectsData.map((project) => (
               <div key={project.id} className="project-card">
-                <div className="project-image">
+                <div className="project-image" style={{
+      backgroundImage: `url(${project.images[0]})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
                   <div className="project-overlay">
                     <Link to={`/project/${project.id}`} className="project-link">
                       View Project →
