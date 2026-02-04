@@ -736,3 +736,21 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ========== LIGHT MODE ADJUSTMENTS ========== */
+[data-theme="light"] .name-left,
+[data-theme="light"] .name-right {
+  color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .hero::before {
+  background: radial-gradient(circle, rgba(0, 204, 112, 0.15), transparent);
+}
+
+[data-theme="light"] .hero-photo {
+  filter: drop-shadow(0 20px 60px rgba(0, 204, 112, 0.3));
+}
+
+[data-theme="light"] .hero-photo:hover {
+  filter: drop-shadow(0 30px 80px rgba(0, 204, 112, 0.5));
+}

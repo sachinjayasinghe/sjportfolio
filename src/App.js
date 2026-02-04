@@ -1,9 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import './App.css';
 import ProjectDetail from './ProjectDetail';
 import projectsData from './projectsData';
+import ThemeToggle from './ThemeToggle';
 
-function HomePage() {
+
+function HomePage({ theme, toggleTheme }) {  // Add props here
   return (
     <>
       {/* Navigation */}
@@ -40,7 +43,7 @@ function HomePage() {
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Hi, I'm <span className="highlight">Sachin</span>
+            Hi, I'm <span className="highlight">Sachin Jayasinghe</span>
           </h1>
           <p className="hero-subtitle">MERN Stack Developer</p>
           <p className="hero-description">
@@ -73,17 +76,18 @@ function HomePage() {
               </p>
               <div className="about-stats">
                 <div className="stat">
-                  <h3>10+</h3>
+                  <h3>2</h3>
+                  <p>Years of Experience</p>
+                </div>
+                <div className="stat">
+                  <h3>4+</h3>
                   <p>Projects Completed</p>
                 </div>
                 <div className="stat">
-                  <h3>5+</h3>
+                  <h3>20+</h3>
                   <p>Technologies</p>
                 </div>
-                <div className="stat">
-                  <h3>100%</h3>
-                  <p>Commitment</p>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -174,7 +178,7 @@ function HomePage() {
                 <div className="contact-icon">📧</div>
                 <div>
                   <h4>Email</h4>
-                  <a href="mailto:your.email@example.com">your.email@example.com</a>
+                  <a href="mailto:sachindulara107@gmail.com">sachindulara107@gmail.com</a>
                 </div>
               </div>
               
@@ -182,7 +186,7 @@ function HomePage() {
                 <div className="contact-icon">💼</div>
                 <div>
                   <h4>LinkedIn</h4>
-                  <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a>
+                  <a href="https://linkedin.com/in/sachin-jayasinghe" target="_blank" rel="noopener noreferrer">linkedin.com/in/sachin-jayasinghe</a>
                 </div>
               </div>
               
@@ -190,7 +194,7 @@ function HomePage() {
                 <div className="contact-icon">💻</div>
                 <div>
                   <h4>GitHub</h4>
-                  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a>
+                  <a href="https://github.com/sachinjayasinghe" target="_blank" rel="noopener noreferrer">github.com/sachinjayasinghe</a>
                 </div>
               </div>
             </div>
@@ -207,19 +211,39 @@ function HomePage() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>© 2024 Your Name. Built with React & ❤️</p>
+        <p>© 2025 Sachin Jayasinghe. All rights reserved.</p>
+        {/* Theme Toggle Button */}
+      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       </footer>
     </>
   );
 }
 
 function App() {
+  // Theme state management
+  const [theme, setTheme] = useState('dark');
+
+  // Load theme from localStorage on mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
+
+  // Toggle theme
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/project/:id" element={<ProjectDetail />} />
+          <Route path="/" element={<HomePage theme={theme} toggleTheme={toggleTheme} />} />
+          <Route path="/project/:id" element={<ProjectDetail theme={theme} toggleTheme={toggleTheme} />} />
         </Routes>
       </div>
     </Router>

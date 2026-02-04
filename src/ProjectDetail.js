@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import projectsData from './projectsData';
+import ThemeToggle from './ThemeToggle';
 import './ProjectDetail.css';
 
-function ProjectDetail() {
+function ProjectDetail({ theme, toggleTheme }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find(p => p.id === parseInt(id));
@@ -127,6 +128,15 @@ function ProjectDetail() {
           </Link>
         )}
       </div>
+       {/* Project Navigation */}
+      <div className="project-navigation">
+        {/* ... existing code ... */}
+      </div>
+
+      {/* Theme Toggle Button */}
+      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+
+      
     </div>
   );
 }
