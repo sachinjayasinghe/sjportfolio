@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import projectsData from './projectsData';
 import ThemeToggle from './ThemeToggle';
+import ColorPicker from './ColorPicker';
 import './ProjectDetail.css';
 
-function ProjectDetail({ theme, toggleTheme }) {
+function ProjectDetail({ theme, toggleTheme, currentColor, onColorChange }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find(p => p.id === parseInt(id));
@@ -133,7 +134,8 @@ function ProjectDetail({ theme, toggleTheme }) {
 
       {/* Theme Toggle Button */}
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-
+       {/* Color Picker */}
+        <ColorPicker currentColor={currentColor} onColorChange={onColorChange} />
       
     </div>
   );

@@ -4,9 +4,11 @@ import './App.css';
 import ProjectDetail from './ProjectDetail';
 import projectsData from './projectsData';
 import ThemeToggle from './ThemeToggle';
+import ColorPicker from './ColorPicker';
+import themePresets from './themePresets';
 
 
-function HomePage({ theme, toggleTheme }) {  // Add props here
+function HomePage({ theme, toggleTheme, currentColor, onColorChange }) {
   return (
     <>
       {/* Navigation */}
@@ -218,6 +220,9 @@ function HomePage({ theme, toggleTheme }) {  // Add props here
         <p>© 2025 Sachin Jayasinghe. All rights reserved.</p>
         {/* Theme Toggle Button */}
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+       {/* Color Picker */}
+      <ColorPicker currentColor={currentColor} onColorChange={onColorChange} />
+    
       </footer>
     </>
   );
@@ -226,28 +231,75 @@ function HomePage({ theme, toggleTheme }) {  // Add props here
 function App() {
   // Theme state management
   const [theme, setTheme] = useState('dark');
+  const [currentColor, setCurrentColor] = useState('green');
 
-  // Load theme from localStorage on mount
+  // Apply color theme to CSS variables
+  const applyColorTheme = (colorKey, themeMode) => {
+    const colors = themePresets[colorKey][themeMode];
+    const root = document.documentElement;
+    
+    root.style.setProperty('--bg-dark', colors.bgDark);
+    root.style.setProperty('--bg-card', colors.bgCard);
+    root.style.setProperty('--accent-primary', colors.accentPrimary);
+    root.style.setProperty('--accent-secondary', colors.accentSecondary);
+    root.style.setProperty('--text-primary', colors.textPrimary);
+    root.style.setProperty('--text-secondary', colors.textSecondary);
+  };
+
+  // Load theme and color from localStorage on mount
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedColor = localStorage.getItem('themeColor') || 'green';
+    
     setTheme(savedTheme);
+    setCurrentColor(savedColor);
+    
     document.documentElement.setAttribute('data-theme', savedTheme);
+    applyColorTheme(savedColor, savedTheme);
   }, []);
 
-  // Toggle theme
+  // Toggle dark/light theme
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+    applyColorTheme(currentColor, newTheme);
+  };
+
+  // Change color theme
+  const handleColorChange = (colorKey) => {
+    setCurrentColor(colorKey);
+    localStorage.setItem('themeColor', colorKey);
+    applyColorTheme(colorKey, theme);
   };
 
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<HomePage theme={theme} toggleTheme={toggleTheme} />} />
-          <Route path="/project/:id" element={<ProjectDetail theme={theme} toggleTheme={toggleTheme} />} />
+          <Route 
+            path="/" 
+            element={
+              <HomePage 
+                theme={theme} 
+                toggleTheme={toggleTheme}
+                currentColor={currentColor}
+                onColorChange={handleColorChange}
+              />
+            } 
+          />
+          <Route 
+            path="/project/:id" 
+            element={
+              <ProjectDetail 
+                theme={theme} 
+                toggleTheme={toggleTheme}
+                currentColor={currentColor}
+                onColorChange={handleColorChange}
+              />
+            } 
+          />
         </Routes>
       </div>
     </Router>
