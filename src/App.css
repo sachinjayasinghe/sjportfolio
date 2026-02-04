@@ -178,7 +178,7 @@
 
 .hero-photo:hover {
   
-  filter: drop-shadow(0 30px 80px rgba(81, 81, 81, 0.5));
+  filter: drop-shadow(0 30px 80px rgba(255, 255, 255, 0.5));
 }
 
 /* Scroll Indicator */
