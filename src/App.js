@@ -41,60 +41,62 @@ function HomePage({ theme, toggleTheme, currentColor, onColorChange }) {
 
 
 
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Hi, I'm <span className="highlight">Sachin Jayasinghe</span>
-          </h1>
-          <p className="hero-subtitle">MERN Stack Developer</p>
-          <p className="hero-description">
-            Building creative web experiences with MongoDB, Express, React & Node.js
-          </p>
-          <div className="hero-buttons">
-  <a href="#contact" className="cta-button">Get in Touch</a>
-  <a href="/assets/Sachin Jayasinghe-Resume.pdf" download className="cta-button secondary">
-    Download CV
-  </a>
-</div>
-        </div>
-      </section>
+{/* Hero Section */}
+<section className="hero">
+  <div className="hero-content">
+    <h1 className="hero-title">
+      Hi, I'm <span className="highlight">Sachin Jayasinghe</span>
+    </h1>
+    <p className="hero-subtitle">Full-Stack Developer | MERN Stack</p>
+    <p className="hero-description">
+      IT Undergraduate passionate about building innovative web applications 
+      and solving real-world problems through code. 
+    </p>
+    <div className="hero-buttons">
+      <a href="#contact" className="cta-button">Get in Touch</a>
+      <a href="/assets/Sachin Jayasinghe-Resume.pdf" download className="cta-button secondary">
+        Download CV
+      </a>
+    </div>
+  </div>
+</section>
 
-      {/* About Section */}
-      <section id="about" className="section about-section">
-        <div className="about-container">
-          <h2 className="section-title">About Me</h2>
-          <div className="about-content">
-            <div className="about-text">
-              <p>
-                I'm a passionate <strong>MERN Stack Developer</strong> who loves building 
-                modern, responsive web applications. With expertise in MongoDB, Express.js, 
-                React, and Node.js, I create full-stack solutions that are both functional 
-                and beautiful.
-              </p>
-              <p>
-                Currently seeking internship opportunities where I can contribute to 
-                innovative projects and continue growing my skills in web development.
-              </p>
-              <div className="about-stats">
-                <div className="stat">
-                  <h3>2</h3>
-                  <p>Years of Experience</p>
-                </div>
-                <div className="stat">
-                  <h3>4+</h3>
-                  <p>Projects Completed</p>
-                </div>
-                <div className="stat">
-                  <h3>20+</h3>
-                  <p>Technologies</p>
-                </div>
-                
-              </div>
-            </div>
+{/* About Section */}
+<section id="about" className="section about-section">
+  <div className="about-container">
+    <h2 className="section-title">About Me</h2>
+    <div className="about-content">
+      <div className="about-text">
+        <p>
+          I'm <strong>Sachin Jayasinghe</strong>, a proactive IT undergraduate from the 
+          University of Moratuwa with a strong focus on <strong>full-stack development</strong> using 
+          the MERN stack. I specialize in designing end-to-end systems, integrating frontend 
+          and backend components, and building user-friendly solutions that solve real-world problems.
+        </p>
+        <p>
+          With experience leading team projects and working on IoT systems, I'm passionate 
+          about creating impactful software through continuous learning and effective collaboration. 
+          Currently seeking <strong>Software Engineer Internship</strong> opportunities to apply my 
+          skills and contribute to innovative projects.
+        </p>
+        <div className="about-stats">
+          <div className="stat">
+            <h3>4+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div className="stat">
+            <h3>2+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div className="stat">
+            <h3>MERN</h3>
+            <p>Stack Specialist</p>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Skills Section */}
       <section id="skills" className="section skills-section">
@@ -170,54 +172,71 @@ function HomePage({ theme, toggleTheme, currentColor, onColorChange }) {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="section contact-section">
-        <div className="contact-container">
-          <h2 className="section-title">Let's Connect</h2>
-          <p className="contact-subtitle">
-            I'm currently looking for internship opportunities. Let's build something amazing together!
-          </p>
-          
-          <div className="contact-content">
-            <div className="contact-info">
-              <div className="contact-item">
-                <div className="contact-icon">📧</div>
-                <div>
-                  <h4>Email</h4>
-                  <a href="mailto:sachindulara107@gmail.com">sachindulara107@gmail.com</a>
-                </div>
-              </div>
-              
-              <div className="contact-item">
-                <div className="contact-icon">💼</div>
-                <div>
-                  <h4>LinkedIn</h4>
-                  <a href="https://linkedin.com/in/sachin-jayasinghe" target="_blank" rel="noopener noreferrer">linkedin.com/in/sachin-jayasinghe</a>
-                </div>
-              </div>
-              
-              <div className="contact-item">
-                <div className="contact-icon">💻</div>
-                <div>
-                  <h4>GitHub</h4>
-                  <a href="https://github.com/sachinjayasinghe" target="_blank" rel="noopener noreferrer">github.com/sachinjayasinghe</a>
-                </div>
-              </div>
-            </div>
-
-            <form className="contact-form">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="Your Message" rows="5" required></textarea>
-              <button type="submit" className="submit-button">Send Message</button>
-            </form>
+  {/* Contact Section */}
+<section id="contact" className="section contact-section">
+  <div className="contact-container">
+    <h2 className="section-title">Let's Connect</h2>
+    <p className="contact-subtitle">
+      I'm actively seeking Software Engineer Internship opportunities. 
+      Let's collaborate and build something amazing together!
+    </p>
+    
+    <div className="contact-content">
+      <div className="contact-info">
+        <div className="contact-item">
+          <div className="contact-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:sachindulara107@gmail.com">sachindulara107@gmail.com</a>
           </div>
         </div>
-      </section>
+        
+        <div className="contact-item">
+          <div className="contact-icon">📱</div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:+94764782785">+94 76 478 2785</a>
+          </div>
+        </div>
+        
+        <div className="contact-item">
+          <div className="contact-icon">💼</div>
+          <div>
+            <h4>LinkedIn</h4>
+            <a href="https://linkedin.com/in/sachin-jay" target="_blank" rel="noopener noreferrer">linkedin.com/in/sachin-jay</a>
+          </div>
+        </div>
+        
+        <div className="contact-item">
+          <div className="contact-icon">💻</div>
+          <div>
+            <h4>GitHub</h4>
+            <a href="https://github.com/sachinjayasinghe" target="_blank" rel="noopener noreferrer">github.com/sachinjayasinghe</a>
+          </div>
+        </div>
+
+        <div className="contact-item">
+          <div className="contact-icon">📍</div>
+          <div>
+            <h4>Location</h4>
+            <p style={{color: 'var(--text-secondary)', margin: 0}}>Bandaragama, Sri Lanka</p>
+          </div>
+        </div>
+      </div>
+
+      <form className="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" className="submit-button">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="footer">
-        <p>© 2025 Sachin Jayasinghe. All rights reserved.</p>
+        <p>© 2026 Sachin Jayasinghe. All rights reserved.</p>
         {/* Theme Toggle Button */}
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
        {/* Color Picker */}
