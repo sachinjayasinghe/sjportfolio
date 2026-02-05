@@ -124,11 +124,11 @@
 
 /* Hover effect - speed up */
 .hero-animated:hover .name-left {
-  animation: slideLeftHover 4s linear infinite;
+  animation: slideLeftHover 5s linear infinite;
 }
 
 .hero-animated:hover .name-right {
-  animation: slideRightHover 4s linear infinite;
+  animation: slideRightHover 5s linear infinite;
 }
 
 @keyframes slideLeftHover {
@@ -176,10 +176,7 @@
   
 }
 
-.hero-photo:hover {
-  
-  filter: drop-shadow(0 30px 80px rgba(255, 255, 255, 0.5));
-}
+
 
 /* Scroll Indicator */
 .scroll-indicator {
