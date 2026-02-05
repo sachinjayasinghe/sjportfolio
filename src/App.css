@@ -85,21 +85,21 @@
 .name-right {
   font-size: 11rem;
   font-weight: 800;
-  color: rgb(121, 121, 121);
+  color: var(--name-animation-color);  /* Use CSS variable */
   white-space: nowrap;
   position: absolute;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, color 0.5s ease;  /* Add color transition */
 }
 
 .name-left {
   top: 30%;
-  left: -20%;
+  left: 10%;
   animation: slideLeftScroll 10s linear infinite;
 }
 
 .name-right {
   top: 55%;
-  right: -20%;
+  right: -30%;
   animation: slideRightScroll 10s linear infinite;
 }
 
@@ -475,7 +475,7 @@
   background: var(--bg-dark);
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(253, 253, 253, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.3s;
 }
 

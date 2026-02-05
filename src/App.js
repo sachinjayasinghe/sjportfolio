@@ -30,8 +30,8 @@ function HomePage({ theme, toggleTheme, currentColor, onColorChange }) {
       {/* New Hero Section with Photo */}
 <section className="hero-animated">
   <div className="animated-background">
-    <span className="name-left">Sachin</span>
-    <span className="name-right">Jayasinghe</span>
+    <span className="name-left">SACHIN</span>
+    <span className="name-right">JAYASINGHE</span>
   </div>
   <div className="hero-photo-container">
     <img src="/assets/sachin-photo.png" alt="Sachin Jayasinghe" className="hero-photo" />
@@ -234,17 +234,18 @@ function App() {
   const [currentColor, setCurrentColor] = useState('green');
 
   // Apply color theme to CSS variables
-  const applyColorTheme = (colorKey, themeMode) => {
-    const colors = themePresets[colorKey][themeMode];
-    const root = document.documentElement;
-    
-    root.style.setProperty('--bg-dark', colors.bgDark);
-    root.style.setProperty('--bg-card', colors.bgCard);
-    root.style.setProperty('--accent-primary', colors.accentPrimary);
-    root.style.setProperty('--accent-secondary', colors.accentSecondary);
-    root.style.setProperty('--text-primary', colors.textPrimary);
-    root.style.setProperty('--text-secondary', colors.textSecondary);
-  };
+const applyColorTheme = (colorKey, themeMode) => {
+  const colors = themePresets[colorKey][themeMode];
+  const root = document.documentElement;
+  
+  root.style.setProperty('--bg-dark', colors.bgDark);
+  root.style.setProperty('--bg-card', colors.bgCard);
+  root.style.setProperty('--accent-primary', colors.accentPrimary);
+  root.style.setProperty('--accent-secondary', colors.accentSecondary);
+  root.style.setProperty('--text-primary', colors.textPrimary);
+  root.style.setProperty('--text-secondary', colors.textSecondary);
+  root.style.setProperty('--name-animation-color', colors.nameAnimationColor);  // Add this line
+};
 
   // Load theme and color from localStorage on mount
   useEffect(() => {
