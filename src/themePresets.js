@@ -73,7 +73,7 @@ const themePresets = {
     dark: {
       bgDark: "#0a0a0a",
       bgCard: "#151515",
-      accentPrimary: "#ffaa33",
+      accentPrimary: "#ff8800",
       accentSecondary: "#ff8800",
       textPrimary: "#ffffff",
       textSecondary: "#a0a0a0"
@@ -81,40 +81,40 @@ const themePresets = {
   },
   pink: {
     name: "Pink",
-    emoji: "🩷",
+    emoji: "🔴",
     light: {
       bgDark: "#ffffff",
       bgCard: "#f9f9f9",
-      accentPrimary: "#ec4899",
-      accentSecondary: "#db2777",
+      accentPrimary: "#fe2d2d",
+      accentSecondary: "#db2727",
       textPrimary: "#0f0f0f",
       textSecondary: "#606060"
     },
     dark: {
       bgDark: "#0a0a0a",
       bgCard: "#151515",
-      accentPrimary: "#f472b6",
-      accentSecondary: "#ec4899",
+      accentPrimary: "#fe2d2d",
+      accentSecondary: "#ec4848",
       textPrimary: "#ffffff",
       textSecondary: "#a0a0a0"
     }
   },
   cyan: {
     name: "Cyan",
-    emoji: "🔷",
+    emoji: "🟡",
     light: {
       bgDark: "#ffffff",
       bgCard: "#f9f9f9",
-      accentPrimary: "#06b6d4",
-      accentSecondary: "#0891b2",
+      accentPrimary: "#ffc800",
+      accentSecondary: "#b2a408",
       textPrimary: "#0f0f0f",
       textSecondary: "#606060"
     },
     dark: {
       bgDark: "#0a0a0a",
       bgCard: "#151515",
-      accentPrimary: "#22d3ee",
-      accentSecondary: "#06b6d4",
+      accentPrimary: "#ffc800",
+      accentSecondary: "#b2a408",
       textPrimary: "#ffffff",
       textSecondary: "#a0a0a0"
     }

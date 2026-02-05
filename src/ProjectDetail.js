@@ -99,9 +99,17 @@ function ProjectDetail({ theme, toggleTheme, currentColor, onColorChange }) {
         </div>
 
         <div className="detail-links">
-          <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-btn github-btn">
-            <span>💻</span> View on GitHub
-          </a>
+          {project.githubLinks.map((link, index) => (
+    <a 
+      key={index}
+      href={link.url} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="project-btn github-btn"
+    >
+      <span>💻</span> {link.label}
+    </a>
+  ))}
           
         </div>
       </div>

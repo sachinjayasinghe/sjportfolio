@@ -49,13 +49,13 @@
 }
 
 .detail-tags span {
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--accent-primary);
   padding: 0.6rem 1.2rem;
   border-radius: 20px;
   font-size: 0.95rem;
   font-weight: 600;
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Image Gallery */
@@ -147,7 +147,7 @@
 
 .thumbnail-strip img.active {
   border-color: var(--accent-primary);
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 /* Content Sections */
@@ -197,9 +197,10 @@
 /* Project Links */
 .detail-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   margin: 3rem 0;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .project-btn {
@@ -223,7 +224,7 @@
 .github-btn:hover {
   border-color: var(--accent-primary);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
 .live-btn {
@@ -233,7 +234,7 @@
 
 .live-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
+  box-shadow: 0 10px 30px rgba(249, 249, 249, 0.4);
 }
 
 /* Project Navigation */
@@ -262,7 +263,7 @@
 .nav-project:hover {
   border-color: var(--accent-primary);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
 .nav-arrow {
@@ -298,6 +299,12 @@
   
   .detail-links {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-btn {
+    width: 100%;
+    justify-content: center;
   }
   
   .project-navigation {
