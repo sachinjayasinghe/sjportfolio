@@ -144,10 +144,10 @@ function HomePage({ theme, toggleTheme, currentColor, onColorChange }) {
             {projectsData.map((project) => (
               <div key={project.id} className="project-card">
                 <div className="project-image" style={{
-      backgroundImage: `url(${project.images[0]})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
+                    backgroundImage: `url(${project.images[0]})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+        }}>
                   <div className="project-overlay">
                     <Link to={`/project/${project.id}`} className="project-link">
                       View Project →
@@ -158,7 +158,7 @@ function HomePage({ theme, toggleTheme, currentColor, onColorChange }) {
                   <h3>{project.title}</h3>
                   <p>{project.shortDescription}</p>
                   <div className="project-tags">
-                    {project.tags.slice(0, 3).map((tag, index) => (
+                    {project.tags.map((tag, index) => (
                       <span key={index}>{tag}</span>
                     ))}
                   </div>
