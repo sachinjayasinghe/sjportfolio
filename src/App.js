@@ -20,7 +20,7 @@ function HomePage({ theme, toggleTheme, currentColor, onColorChange }) {
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
     <li>
-      <a href="/assets/Sachin Jayasinghe-Resume.pdf" download className="cv-download">
+      <a href="/assets/Sachin Jayasinghe-CV.pdf" download className="cv-download">
         Download CV
       </a>
     </li>
