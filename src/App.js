@@ -20,7 +20,7 @@ function HomePage({ theme, toggleTheme, currentColor, onColorChange }) {
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
     <li>
-      <a href="/assets/Sachin Jayasinghe-CV.pdf" download className="cv-download">
+      <a href="/assets/Sachin Jayasinghe - CV.pdf" download className="cv-download">
         Download CV
       </a>
     </li>
@@ -54,7 +54,7 @@ function HomePage({ theme, toggleTheme, currentColor, onColorChange }) {
     </p>
     <div className="hero-buttons">
       <a href="#contact" className="cta-button">Get in Touch</a>
-      <a href="/assets/Sachin Jayasinghe-CV.pdf" download className="cta-button secondary">
+      <a href="/assets/Sachin Jayasinghe - CV.pdf" download className="cta-button secondary">
         Download CV
       </a>
     </div>
